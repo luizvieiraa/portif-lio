@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — Luiz Vieira</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div style="margin-left:20px; display:flex; gap:12px;">
+          <a href="https://github.com/luizvieiraa" target="_blank" class="btn ghost">GitHub</a>
+          <a href="https://www.linkedin.com/in/luiz-henrique-carvalho-vieira-4a881737b/" target="_blank" class="btn ghost">LinkedIn</a>
+        </div>
+
+        <div>
+          <h1>Luiz Vieira</h1>
+          <p class="lead">Desenvolvedor web • Estudante de ciência da computação</p>
+        </div>
+      </div>
+
+      <nav class="tabs">
+        <a class="tab" href="index.html">Projetos</a>
+        <a class="tab" href="sobre.html">Sobre</a>
+        <a class="tab active" href="contato.html">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contact">
+        <h2>Contato</h2>
+        <p class="note">Preencha o formulário abaixo e eu responderei o mais rápido possível.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="small">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text" required placeholder="Seu nome" />
+            </div>
+
+            <div class="small">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" />
+            </div>
+          </div>
+
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" required placeholder="Escreva sua mensagem..."></textarea>
+
+          <div class="submit-wrap">
+            <button class="btn primary" type="submit">Enviar mensagem</button>
+            <span class="note">Ou envie um email diretamente para <a href="mailto:lhcv@cesar.school">lhcv@cesar.school</a></span>
+          </div>
+
+          <div id="toast" class="toast"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Luiz Vieira
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

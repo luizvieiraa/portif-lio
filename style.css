@@ -1,0 +1,131 @@
+:root{
+  --accent: #c8102e; /* vermelho tema */
+  --accent-dark: #a00a24;
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #555;
+  --radius: 10px;
+  --glass: rgba(200,16,46,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset simples */
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px;
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  background:linear-gradient(180deg,var(--glass),transparent);
+  border-radius:16px;
+  box-shadow:0 8px 30px rgba(238, 5, 5, 0.06);
+  overflow:hidden;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:24px 28px;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  gap:16px;
+}
+
+.brand{
+  display:flex;align-items:center;gap:12px
+}
+.logo{
+  width:48px;height:48px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+}
+h1{font-size:18px;margin:0}
+p.lead{margin:0;color:var(--muted);font-size:13px}
+
+/* Tabs – corrigidas para links */
+.tabs{
+  display:flex;
+  gap:8px;
+}
+
+.tabs .tab{
+  background:transparent;
+  border:1px solid transparent;
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  text-decoration:none;
+  color:var(--text);
+  transition:0.2s;
+}
+
+.tabs .tab:hover{
+  background:rgba(0,0,0,0.04);
+}
+
+/* Aba ativa */
+.tabs .tab.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent-dark);
+  box-shadow:0 6px 18px rgba(200,16,46,0.12);
+}
+
+main{padding:28px}
+
+/* Projects grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px,1fr));gap:16px}
+.card{
+  border-radius:12px;padding:16px;background:linear-gradient(180deg, #fff, #fff);border:1px solid rgba(0,0,0,0.06);
+}
+.card h3{margin:0 0 8px 0}
+.card p{margin:0 0 12px 0;color:var(--muted);font-size:14px}
+.btn{
+  display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer
+}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06)}
+
+/* About */
+.about{
+  display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap
+}
+.avatar{
+  width:140px;height:140px;border-radius:14px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700
+}
+.bio{max-width:720px}
+
+/* Contact form */
+form{max-width:720px}
+label{display:block;font-weight:600;margin-top:12px;margin-bottom:6px}
+input[type="text"],input[type="email"],textarea{
+  width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);font-size:14px
+}
+textarea{min-height:120px;resize:vertical}
+.form-row{display:flex;gap:12px}
+.small{flex:1}
+.submit-wrap{margin-top:12px}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+
+/* Success message */
+.toast{padding:12px 14px;border-radius:10px;background:rgba(16,128,62,0.08);border:1px solid rgba(16,128,62,0.14);color:#084;display:none;margin-top:12px}
+
+footer{padding:18px 28px;border-top:1px solid rgba(0,0,0,0.04);text-align:center;color:var(--muted);font-size:13px}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{flex-direction:column;align-items:flex-start}
+  .about{flex-direction:column}
+}
+
+.about img {
+  border-radius: 14px;
+  object-fit: cover;
+}
